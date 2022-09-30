@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import validationSchema from '../utils/inputValidation';
-
+import Context from '../context/context';
+import { useNavigate } from "react-router-dom"
 
 const initialValues = {
   email: "",
@@ -10,8 +11,13 @@ const initialValues = {
 
 export default function LoginInput() {
 
+  const { setConnected } = useContext(Context)
+  const navigate = useNavigate();
+
   const handleSubmit = (values) => {
-    console.log(values)
+    localStorage.setItem("email", JSON.stringify(values.email))
+    setConnected(true)
+    navigate('/posts')
 
   };
 
