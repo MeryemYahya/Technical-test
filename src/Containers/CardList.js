@@ -9,11 +9,17 @@ export default function CardList() {
   const posts = useQuery(['posts'], getData, {
     onError: (error) =>
       alert(`Something went wrong: ${error.message}`),
+    retry: 1,
+    retryDelay: 3000
   })
   console.log(posts)
   return (
     <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row gap-4'>
       {
+        posts.isError && <h1> error</h1>
+      }
+      {
+
         posts.isLoading ?
           <>
             <LoadingCard />
@@ -22,7 +28,7 @@ export default function CardList() {
           </>
           :
 
-          posts.data.map(post => (
+          posts.data?.map(post => (
             <Card key={post?.id} post={post} />
           ))
       }

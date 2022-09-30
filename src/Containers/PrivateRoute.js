@@ -6,6 +6,8 @@ import Context from '../context/context';
 export function PrivateRoute({ children }) {
   let { connected } = useContext(Context);
 
+  console.log("connected", connected)
+
   if (!connected) {
     return <Navigate to="/login" replace />;
   } else {

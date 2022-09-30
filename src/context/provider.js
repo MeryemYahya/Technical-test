@@ -9,7 +9,6 @@ const Provider = (props) => {
 
   useEffect(() => {
     const user = localStorage.getItem('email');
-    console.log(user);
     user && setConnected(true)
   }, [])
 
