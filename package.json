@@ -2,6 +2,7 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://MeryemYahya.github.io/Technical-test",
   "dependencies": {
     "@tanstack/react-query": "^4.8.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -17,6 +18,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "npx gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,5 +1,5 @@
 import React from 'react'
-import { getData } from '../services/data'
+import { getData } from '../Services/data'
 import { useQuery } from '@tanstack/react-query';
 import Card from '../components/Card';
 import LoadingCard from '../components/LoadingCard';

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import NavBar from '../Layouts/NavBar'
 import LoginInput from '../Containers/LoginInput'
-import Context from '../context/context';
+import Context from '../context/Context';
 import { Navigate } from "react-router-dom";
 
 export default function Login() {

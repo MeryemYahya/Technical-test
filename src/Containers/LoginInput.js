@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import validationSchema from '../utils/inputValidation';
-import Context from '../context/context';
+import validationSchema from '../Validation/inputValidation';
+import Context from '../context/Context';
 import { useNavigate } from "react-router-dom"
 
 const initialValues = {

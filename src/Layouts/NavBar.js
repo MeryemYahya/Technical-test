@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from "react-router-dom"
 import { useNavigate, useLocation } from 'react-router-dom';
-import Context from '../context/context';
+import Context from '../context/Context';
 
 export default function NavBar() {
 
