@@ -7,16 +7,3 @@ body {
   font-family: sans-serif;
   background-color: #f7f7f7;
 }
-.ani{
-  animation: appear 0.5s linear ;
-}
-
-@keyframes appear{
-        from {
-        transform: translateY(1.5rem)
-
-        }
-        to{
-transform: translateX(0px)
-        }
-      }
