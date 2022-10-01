@@ -21,6 +21,10 @@ Runs the app in the development mode.
 npm start
 ```
 Builds the app for production to the build folder.
+```
+npm run build
+```
+Deploy to github pages
 
 Open your `package.json` and add a `homepage` field for your project:
 
@@ -28,10 +32,6 @@ Open your `package.json` and add a `homepage` field for your project:
   "homepage": "https://username.github.io/repo-name",
 ```
 then 
-```
-npm run build
-```
-Deploy to github pages
 ```
 npm run deploy
 ```
