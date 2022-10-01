@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Table of Contents
 - [Demo](#demo)
-- [Installation](#installation)
+- [Installation](#instalation)
 - [Usage](#usage)
 - [Technologies used](#technologies-used)
 - [Project Structure](#project-structure)
