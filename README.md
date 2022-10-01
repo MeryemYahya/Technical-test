@@ -16,15 +16,15 @@ npm install
 ```
 ## Usage
 
-Runs the app in the development mode.
+### Runs the app in the development mode.
 ```
 npm start
 ```
-Builds the app for production to the build folder.
+### Builds the app for production to the build folder.
 ```
 npm run build
 ```
-Deploy to github pages
+### Deploy to github pages
 
 Open your `package.json` and add a `homepage` field for your project:
 
