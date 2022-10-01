@@ -2,7 +2,7 @@
     "recommendations": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "ms-azuretools.vscode-docker",
+        "PKief.material-icon-theme",
         "dsznajder.es7-react-js-snippets",
         "bradlc.vscode-tailwindcss",
         "rvest.vs-code-prettier-eslint",

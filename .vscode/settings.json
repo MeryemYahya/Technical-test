@@ -14,5 +14,5 @@
         "titleBar.activeBackground": "#0A34A5",
         "titleBar.activeForeground": "#F9FAFF"
     },
-    "window.title": "React Start Template"
+    "window.title": "${folderName}"
 }
