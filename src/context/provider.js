@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Context from "./context";
 
 
 
 const Provider = (props) => {
 
-  const [connected, setConnected] = useState(false)
-
-  useEffect(() => {
-    const user = localStorage.getItem('email');
-    user && setConnected(true)
-  }, [])
+  const [connected, setConnected] = useState(localStorage.getItem('email') || false)
 
   return (
     <Context.Provider

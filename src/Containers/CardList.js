@@ -7,30 +7,28 @@ import LoadingCard from '../components/LoadingCard';
 export default function CardList() {
 
   const posts = useQuery(['posts'], getData, {
-    onError: (error) =>
-      alert(`Something went wrong: ${error.message}`),
     retry: 1,
-    retryDelay: 3000
   })
-  console.log(posts)
+
+  const renderFetchedData = () => {
+    if (posts.isError) return <h1 className='text-lg'> An error occurred</h1>
+    if (posts.isLoading) return (
+      <>
+        <LoadingCard />
+        <LoadingCard />
+        <LoadingCard />
+      </>
+    )
+    if (posts.data) return (
+      posts.data?.map(post => (
+        <Card key={post?.id} post={post} />
+      ))
+    )
+  }
   return (
-    <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row gap-4'>
+    <div className='w-full my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row gap-4'>
       {
-        posts.isError && <h1> error</h1>
-      }
-      {
-
-        posts.isLoading ?
-          <>
-            <LoadingCard />
-            <LoadingCard />
-            <LoadingCard />
-          </>
-          :
-
-          posts.data?.map(post => (
-            <Card key={post?.id} post={post} />
-          ))
+        renderFetchedData()
       }
     </div>
   )

@@ -13,6 +13,7 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path='/posts' element={<PrivateRoute><Posts /></PrivateRoute>} />
+        <Route path='*' element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

@@ -17,7 +17,7 @@ export default function NavBar() {
 
   return (
     <nav className='w-full bg-secondary shadow-sm'>
-      <div className='py-2 px-6 flex justify-between container mx-auto'>
+      <div className='py-2 px-6 flex items-center justify-between container mx-auto'>
         <div className=''>
           <h3 className='font-bold text-lg'>Logo</h3>
         </div>
